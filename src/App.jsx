@@ -4,7 +4,7 @@ import Inicio from "./components/Inicio.jsx";
 import Productos from "./components/Productos.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error404 from "./components/Error.jsx";
-import './App.css';                           // Estilos generales
+import "./App.css";                           // Estilos generales
 /*import ItemListContainer from "./components/ItemListContainer.jsx"; BORRAR AL FINAL*/
 function App() {
    return (
