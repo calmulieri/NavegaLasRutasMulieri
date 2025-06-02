@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem;
-  background-color: #f5f5f5;
+  background-color: #f9f906;
   border-bottom: 1px solid #ccc;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   box-sizing: border-box;
@@ -46,7 +46,7 @@
 
 .cartcount {
   margin-left: 6px;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.959);
   color: white;
   font-size: 0.75rem;
   padding: 2px 6px;
