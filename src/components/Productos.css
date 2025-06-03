@@ -1,0 +1,51 @@
+.productos-container {
+    padding-top: 120px;
+    /* Se me solapa con el Navbar  -- ver*/
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.productos-container h2 {
+    text-align: center;
+    margin-top: 2rem;
+   /* margin-bottom: 2rem;*/
+}
+/*Armo el grid */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+.producto-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ver-btn {
+    margin-top: 1rem;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ver-btn:hover {
+    background-color: #0056b3;
+}

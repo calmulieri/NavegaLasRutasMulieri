@@ -1,8 +1,8 @@
 
-import { Link, Outlet } from 'react-router-dom';
-import CartWidget from './CartWidget';
-import logo from '../assets/logo.png';
-import './NavBar.css';
+import { Link, Outlet } from "react-router-dom";
+import CartWidget from "./CartWidget";
+import logo from "../assets/logo.png";
+import "./NavBar.css";
 
 
 function NavBar() {
