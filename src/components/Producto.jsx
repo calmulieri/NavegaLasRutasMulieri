@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom';
-import misproductos from './productos/misproductos';
+import { useParams } from "react-router-dom";
+import misproductos from "./productos/misproductos";
 import "./Producto.css";
 
 const Producto = () => {

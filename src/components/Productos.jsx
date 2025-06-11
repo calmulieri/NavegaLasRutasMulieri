@@ -1,4 +1,4 @@
-import { useState, outlet } from "react";
+import { useState } from "react";
 import misproductos from "./productos/misproductos.js";
 import { Link } from "react-router-dom";
 import "./Productos.css";
