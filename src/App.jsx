@@ -5,6 +5,7 @@ import Productos from "./components/Productos.jsx";
 import Producto from "./components/Producto.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error404 from "./components/Error.jsx";
+import {getFirestore,doc,getDoc} from "firebase/firestore"
 import "./App.css";                           // Estilos generales
 /*import ItemListContainer from "./components/ItemListContainer.jsx"; BORRAR AL FINAL*/
 function App() {
