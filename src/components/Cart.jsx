@@ -1,4 +1,6 @@
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
+import CheckoutForm from "./CheckoutForm";
 
 const Cart = () => {
   const { carrito, vaciarCarrito, eliminarProducto, cantidadTotal, total } = useCart();
@@ -21,8 +23,16 @@ const Cart = () => {
           </li>
         ))}
       </ul>
+
       <h3>Total ({cantidadTotal} productos): ${total}</h3>
       <button onClick={vaciarCarrito}>Vaciar carrito</button>
+
+      {carrito.length > 0 && (
+        <>
+          <h3>Completa tus datos para finalizar la compra:</h3>
+          <CheckoutForm />
+        </>
+      )}
     </div>
   );
 };

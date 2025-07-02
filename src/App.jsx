@@ -6,6 +6,7 @@ import ItemListContainer from "./components/ItemListContainer.jsx";
 import ItemDetailContainer from "./components/ItemDetailContainer.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error404 from "./components/Error.jsx";
+import CheckoutForm from "./components/CheckoutForm.jsx"; 
 import "./App.css";                           // Estilos generales
 function App() {
    return (
@@ -15,6 +16,7 @@ function App() {
         
         <Route path="/" element={<Inicio />} />
         <Route path="/carrito" element={<Cart />} />
+        <Route path="/checkout" element={<CheckoutForm />} />
         <Route path="/productos" element={<ItemListContainer />} />
         <Route path="/producto/:id" element={<ItemDetailContainer />} />
         <Route path="/nosotros" element={<Nosotros />} />
