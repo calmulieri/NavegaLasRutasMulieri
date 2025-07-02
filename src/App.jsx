@@ -1,21 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar.jsx";
 import Inicio from "./components/Inicio.jsx";
-import Productos from "./components/Productos.jsx";
-import Producto from "./components/Producto.jsx";
+import ItemListContainer from "./components/ItemListContainer.jsx";
+import ItemDetailContainer from "./components/ItemDetailContainer.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error404 from "./components/Error.jsx";
-import {getFirestore,doc,getDoc} from "firebase/firestore"
 import "./App.css";                           // Estilos generales
-/*import ItemListContainer from "./components/ItemListContainer.jsx"; BORRAR AL FINAL*/
 function App() {
    return (
     <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/productos" element={<Productos />} />
-        <Route path="/producto/:id" element={<Producto />} />
+        <Route path="/productos" element={<ItemListContainer />} />
+        <Route path="/producto/:id" element={<ItemDetailContainer />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>

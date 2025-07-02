@@ -1,12 +1,13 @@
-.productlist {
-    width: 100vw;
-    min-height: calc(100vh - 100px);    /*para no solapar header*/
-    margin-top: 100px;
-    padding: 2rem;
-    background-color: orange;
-    text-align: center;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.productos-container {
+  width: 100vw;
+  min-height: calc(100vh - 100px);
+  margin-top: 100px;
+  padding: 2rem;
+  background-color: orange;
+  box-sizing: border-box;
+  text-align: left;
+}
+select {
+  border: 2px solid red;
+  font-size: 1rem;
 }
