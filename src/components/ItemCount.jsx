@@ -1,40 +1,31 @@
-// src/components/ItemCount.jsx
 import { useState } from "react";
-import "./ItemCount.css"; // Estilos opcionales
+import "./ItemCount.css";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [cantidad, setCantidad] = useState(initial);
-  const [agregado, setAgregado] = useState(false);
 
   const aumentar = () => {
-    if (cantidad < stock) setCantidad(cantidad + 1);
+    if (cantidad < stock) {
+      setCantidad(cantidad + 1);
+    }
   };
 
   const disminuir = () => {
-    if (cantidad > 1) setCantidad(cantidad - 1);
-  };
-
-  const agregarAlCarrito = () => {
-    onAdd(cantidad);
-    setAgregado(true);
+    if (cantidad > 1) {
+      setCantidad(cantidad - 1);
+    }
   };
 
   return (
     <div className="item-count">
-      {agregado ? (
-        <p>Producto agregado al carrito ✔</p>
-      ) : (
-        <>
-          <div className="contador">
-            <button onClick={disminuir}>-</button>
-            <span>{cantidad}</span>
-            <button onClick={aumentar}>+</button>
-          </div>
-          <button onClick={agregarAlCarrito} className="agregar-btn">
-            Agregar al carrito
-          </button>
-        </>
-      )}
+      <div className="controles">
+        <button onClick={disminuir}>-</button>
+        <span>{cantidad}</span>
+        <button onClick={aumentar}>+</button>
+      </div>
+      <button onClick={() => onAdd(cantidad)} className="agregar-btn">
+        Agregar al carrito
+      </button>
     </div>
   );
 };

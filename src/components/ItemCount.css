@@ -1,0 +1,29 @@
+.item-count {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controles button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.agregar-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.agregar-btn:hover {
+  background-color: #005fa3;
+}
