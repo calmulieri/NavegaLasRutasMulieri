@@ -1,20 +1,33 @@
+// src/components/ItemDetail.jsx
 import { useState } from "react";
 import ItemCount from "./ItemCount";
-import { useCart } from "../context/CartContext"; //Importao hook
+import { useCart } from "../context/CartContext";
 import "./ItemDetail.css";
+
+// Importa dinámicamente todas las imágenes desde assets
+const imagenes = import.meta.glob('../assets/*.jpg', { eager: true, import: 'default' });
 
 const ItemDetail = ({ producto }) => {
   const [agregado, setAgregado] = useState(false);
-  const { agregarProducto } = useCart(); //Uso función del context
+  const { agregarProducto } = useCart();
 
   const handleAdd = (cantidad) => {
-    agregarProducto(producto, cantidad); //Agrega al carrito
+    agregarProducto(producto, cantidad);
     setAgregado(true);
   };
+
+  const imagenSrc = imagenes[`../assets/${producto.imageId}`];
 
   return (
     <div className="producto-detalle-container">
       <div className="producto-detalle-card">
+        {imagenSrc && (
+          <img
+            src={imagenSrc}
+            alt={producto.title}
+            className="producto-detalle-imagen"
+          />
+        )}
         <h2>{producto.title}</h2>
         <p>{producto.description}</p>
         <p>Precio: ${producto.price}</p>
