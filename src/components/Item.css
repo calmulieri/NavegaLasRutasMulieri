@@ -1,0 +1,52 @@
+.producto-card {
+  width: 100%;
+  max-width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+  /* Flex para alinear el botón abajo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.producto-card:hover {
+  transform: scale(1.02);
+}
+
+.producto-imagen {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.producto-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.producto-card p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+
+.ver-btn {
+  margin-top: auto; /* fuerza a empujar el botón hacia abajo */
+  padding: 0.5rem 1rem;
+  background-color: #6c0a8a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.ver-btn:hover {
+  background-color: #53056a;
+}

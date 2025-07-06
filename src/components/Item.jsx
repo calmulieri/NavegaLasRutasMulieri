@@ -1,28 +1,22 @@
 
-// src/components/Item.jsx
 import { Link } from "react-router-dom";
-import "./Item.css"; // CSS se aplicará más adelante
+import "./Item.css";
 
-// Importa todas las imágenes de forma dinámica
-const imagenes = import.meta.glob('../assets/*.jpg', { eager: true, import: 'default' });
-
-const Item = ({ producto }) => {
-  const imagenSrc = imagenes[`../assets/${producto.imageId}`];
+const Item = ({ id, title, description, price, categoryId, imageId }) => {
+  const imagenSrc = `/src/assets/${imageId}`;
 
   return (
     <div className="producto-card">
-      {imagenSrc && (
-        <img
-          src={imagenSrc}
-          alt={producto.title}
-          className="producto-imagen"
-        />
-      )}
-      <h3>{producto.title}</h3>
-      <p>{producto.description}</p>
-      <p>Precio: ${producto.price}</p>
-      <p>Categoría: {producto.categoryId}</p>
-      <Link to={`/producto/${producto.id}`}>
+      <img
+        src={imagenSrc}
+        alt={title}
+        className="producto-imagen"
+      />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <p>Precio: ${price}</p>
+      <p>Categoría: {categoryId}</p>
+      <Link to={`/producto/${id}`}>
         <button className="ver-btn">Ver</button>
       </Link>
     </div>

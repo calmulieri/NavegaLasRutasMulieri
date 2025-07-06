@@ -1,12 +1,10 @@
-// src/components/ItemList.jsx
 import Item from "./Item";
-import "./ItemList.css"; // Si querés aplicar estilos específicos
-
+import "./ItemList.css";
 const ItemList = ({ productos }) => {
   return (
-    <div className="productos-grid">
+    <div className="item-list">
       {productos.map((prod) => (
-        <Item key={prod.id} producto={prod} />
+        <Item key={prod.id} {...prod} />
       ))}
     </div>
   );

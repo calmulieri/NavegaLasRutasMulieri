@@ -1,13 +1,80 @@
+/* Contenedor principal */
 .productos-container {
-  width: 100vw;
-  min-height: calc(100vh - 100px);
-  margin-top: 100px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto 0 auto;
   padding: 2rem;
-  background-color: orange;
+  background-color: #fdfdf7;
   box-sizing: border-box;
-  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-select {
-  border: 2px solid red;
+
+/* Título */
+.productos-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Filtro de categoría */
+.filtro-categoria {
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filtro-categoria label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.filtro-categoria select {
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #888;
+  background-color: #fff;
+  min-width: 200px;
+  text-align: center;
+  transition: border 0.3s;
+}
+
+.filtro-categoria select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Texto de carga */
+.productos-container p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+/* Media Queries: responsive */
+@media (max-width: 768px) {
+  .productos-container {
+    padding: 1rem;
+    margin-top: 80px;
+  }
+
+  .productos-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .filtro-categoria {
+    margin: 1.5rem auto;
+  }
+
+  .filtro-categoria select {
+    width: 100%;
+    max-width: 300px;
+  }
 }

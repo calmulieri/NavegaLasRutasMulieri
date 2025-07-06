@@ -1,18 +1,18 @@
 .navbar {
   width: 100%;
-  position: fixed; 
+  position: sticky;
   top: 0;
   left: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem;
-  background-color: #f9f906;
-  border-bottom: 1px solid #ccc;
+  background-color: rgb(72, 2, 72);
+  border-bottom: 1px solid #c9c909;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
-
 .milogo {
   width: 100px;
 }
@@ -27,7 +27,7 @@
 
 .navitem a {
   text-decoration: none;
-  color: black;
+  color: rgb(220, 191, 4);
   font-weight: bold;
 }
 /* CSS para el cartwidget */
@@ -47,7 +47,7 @@
 .cartcount {
   margin-left: 6px;
   background-color: rgba(255, 0, 0, 0.959);
-  color: white;
+  color: violet;
   font-size: 0.75rem;
   padding: 2px 6px;
   border-radius: 50%;
