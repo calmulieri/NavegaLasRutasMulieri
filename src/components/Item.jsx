@@ -2,8 +2,10 @@
 import { Link } from "react-router-dom";
 import "./Item.css";
 
+const imagenes = import.meta.glob('../assets/*.jpg', { eager: true, import: 'default' });
 const Item = ({ id, title, description, price, categoryId, imageId }) => {
-  const imagenSrc = `/src/assets/${imageId}`;
+const imagenSrc = imagenes[`../assets/${imageId}`];
+
 
   return (
     <div className="producto-card">
