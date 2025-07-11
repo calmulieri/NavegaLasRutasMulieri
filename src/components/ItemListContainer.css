@@ -2,14 +2,13 @@
 .productos-container {
   width: 100%;
   max-width: 1200px;
-  margin: 100px auto 0 auto;
+  margin: 40px auto 0 auto; /* Antes era 100px */
   padding: 2rem;
   background-color: #fdfdf7;
   box-sizing: border-box;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Título */
 .productos-container h2 {
   font-size: 2rem;
@@ -61,8 +60,8 @@
 /* Media Queries: responsive */
 @media (max-width: 768px) {
   .productos-container {
+    margin-top: 20px;
     padding: 1rem;
-    margin-top: 80px;
   }
 
   .productos-container h2 {

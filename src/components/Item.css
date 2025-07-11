@@ -8,16 +8,15 @@
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-
-  /* Flex para alinear el botón abajo */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 460px;
 }
+
 .producto-card:hover {
   transform: scale(1.02);
 }
-
 .producto-imagen {
   width: 100%;
   max-height: 200px;
@@ -38,7 +37,8 @@
 
 
 .ver-btn {
-  margin-top: auto; /* fuerza a empujar el botón hacia abajo */
+  margin-top: auto;
+  /* fuerza a empujar el botón hacia abajo */
   padding: 0.5rem 1rem;
   background-color: #6c0a8a;
   color: #fff;
@@ -47,6 +47,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .ver-btn:hover {
   background-color: #53056a;
 }

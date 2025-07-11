@@ -37,35 +37,54 @@ const CheckoutForm = () => {
   };
 
   return (
-    <div>
-      <h2>Checkout</h2>
-      {idOrden ? (
-        <div>
-          <h3>¡Gracias por tu compra!</h3>
-          <p>Tu número de orden es: <strong>{idOrden}</strong></p>
-        </div>
-      ) : (
-<form onSubmit={manejarSubmit}>
-  <div>
-    <label>Nombre:</label>
-    <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} required />
-  </div>
-  <div>
-    <label>Teléfono:</label>
-    <input type="tel" value={telefono} onChange={(e) => setTelefono(e.target.value)} required />
-  </div>
-  <div>
-    <label>Email:</label>
-    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-  </div>
+  <div className="checkout-form">
+    {idOrden ? (
+      <div>
+        <h3>¡Gracias por tu compra!</h3>
+        <p>Tu número de orden es: <strong>{idOrden}</strong></p>
+      </div>
+    ) : (
+      <>
+        <h2>Completa tus datos para finalizar la compra:</h2>
+        <form onSubmit={manejarSubmit}>
+          <div>
+            <label htmlFor="nombre">Nombre:</label>
+            <input
+              id="nombre"
+              type="text"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="telefono">Teléfono:</label>
+            <input
+              id="telefono"
+              type="tel"
+              value={telefono}
+              onChange={(e) => setTelefono(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Correo electrónico:</label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-  <p><strong>Total a pagar: ${total}</strong></p>
+          <p>Total a pagar: <strong>${total}</strong></p>
 
-  <button type="submit">Finalizar compra</button>
-</form>
-      )}
-    </div>
-  );
+          <button type="submit">Finalizar compra</button>
+        </form>
+      </>
+    )}
+  </div>
+);
 };
-
 export default CheckoutForm;
