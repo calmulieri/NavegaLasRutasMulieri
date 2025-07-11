@@ -18,12 +18,21 @@ const CheckoutForm = () => {
   const manejarSubmit = async (e) => {
     e.preventDefault();
 
-    const orden = {
-      comprador: { nombre, telefono, email },
-      items: carrito,
-      fecha: Timestamp.fromDate(new Date()),
-      total,
-    };
+  const orden = {
+  buyer: {
+    name: nombre,
+    phone: telefono,
+    email: email,
+  },
+  items: carrito.map((prod) => ({
+    id: prod.id,
+    title: prod.title,
+    price: prod.price,
+    quantity: prod.cantidad,
+  })),
+  total,
+  date: Timestamp.fromDate(new Date()),
+};
 
     try {
       const db = getFirestore();

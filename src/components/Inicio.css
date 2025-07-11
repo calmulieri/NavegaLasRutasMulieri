@@ -1,0 +1,22 @@
+.inicio-container {
+  margin: 100px auto 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+  background-color: #fdfdf7;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.inicio-container h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.inicio-imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

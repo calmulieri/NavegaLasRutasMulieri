@@ -1,11 +1,13 @@
-import React from 'react'
+import "./Inicio.css";
+import imagenInicio from "../assets/inicio.jpg"; // Ajustá el nombre si cambia
 
 const Inicio = () => {
   return (
-    <div>
-        <h2>Bienvenido al inicio</h2>;
+    <div className="inicio-container">
+      <h1>Bienvenidos a la tienda de Carliña</h1>
+      <img src={imagenInicio} alt="Ofertas de ropa" className="inicio-imagen" />
     </div>
-  )
-}
+  );
+};
 
-export default Inicio
+export default Inicio;
